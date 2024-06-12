@@ -1,6 +1,10 @@
 autoload -Uz promptinit
 promptinit
 
+if [ -d '$HOME/.ghcup' ]; then
+	export PATH='$HOME/.ghcup/bin':$PATH
+fi
+
 setopt histignorealldups sharehistory
 
 bindkey -e
