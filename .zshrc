@@ -44,3 +44,4 @@ if ! zplug check --verbose; then
 fi
 zplug load
 
+neofetch
