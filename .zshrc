@@ -5,6 +5,7 @@ setopt histignorealldups sharehistory
 
 bindkey -e
 bindkey '^H' backward-kill-word
+bindkey '5~' kill-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
@@ -42,3 +43,4 @@ if ! zplug check --verbose; then
 	fi
 fi
 zplug load
+
