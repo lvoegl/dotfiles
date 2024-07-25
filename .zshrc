@@ -22,13 +22,13 @@ alias -g '......'='../../../../../'
 
 HISTSIZE=5000
 SAVEHIST=5000
-HISTFILE=~/.zsh_history
-
-zstyle ':completion:*' menu select
-zstyle ':completion:*' completer _complete _ignored _expand_alias
+HISTFILE=$HOME/.zsh_history
 
 autoload -Uz compinit
 compinit
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' completer _complete _ignored _expand_alias
 
 source /usr/share/zplug/init.zsh
 zplug 'zsh-users/zsh-syntax-highlighting'
