@@ -1,0 +1,18 @@
+#!/bin/sh
+
+qpdf --version > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+	echo "qpdf must be installed"
+	exit 1
+fi
+
+if [ $# -ne 2 ]
+	then
+	echo "$0 <folder-path> <password>"
+	exit 2
+fi
+
+find "$1" -type f -name "*.pdf" | while read -r f; do
+	echo "trying to decrypt '$(basename "$f")'"
+	qpdf --password="$2" --decrypt "$f" --replace-input;
+done

@@ -1,6 +1,8 @@
 autoload -Uz promptinit
 promptinit
 
+export PATH='$HOME/.dotfiles/bin':$PATH
+
 if [ -d '$HOME/.ghcup' ]; then
 	export PATH='$HOME/.ghcup/bin':$PATH
 fi
