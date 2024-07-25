@@ -1,6 +1,9 @@
 autoload -Uz promptinit
 promptinit
 
+autoload -Uz select-word-style
+select-word-style bash
+
 path+=$HOME/.dotfiles/bin
 
 if [ -d '$HOME/.ghcup' ]; then
