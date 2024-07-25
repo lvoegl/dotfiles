@@ -12,8 +12,8 @@ setopt histignorealldups sharehistory
 bindkey -e
 bindkey '^H' backward-kill-word
 bindkey '5~' kill-word
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
 
 alias -g '...'='../../'
 alias -g '....'='../../../'
@@ -43,7 +43,7 @@ zplug 'plugins/command-not-found', from:oh-my-zsh
 zplug 'themes/agnoster', from:oh-my-zsh, as:theme
 
 if ! zplug check --verbose; then
-	printf "Install? [y/N]: "
+	printf 'Install? [y/N]: '
 	if read -q; then
 		echo; zplug install
 	fi
