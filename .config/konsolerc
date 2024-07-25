@@ -1,0 +1,15 @@
+[Desktop Entry]
+DefaultProfile=lvoegl.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+Height=700
+Width=1300
+RestorePositionForNextInstance=false
+State=
+ToolBarsMovable=Disabled
+
+[UiSettings]
+ColorScheme=

@@ -1,0 +1,14 @@
+[PlasmaRunnerManager]
+migrated=true
+
+[Plugins]
+PIM Contacts Search RunnerEnabled=false
+appstreamEnabled=false
+baloosearchEnabled=false
+katesessionsEnabled=false
+konsoleprofilesEnabled=false
+org.kde.activities2Enabled=false
+placesEnabled=false
+recentdocumentsEnabled=false
+shellEnabled=false
+webshortcutsEnabled=false
