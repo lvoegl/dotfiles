@@ -1,10 +1,10 @@
 autoload -Uz promptinit
 promptinit
 
-export PATH='$HOME/.dotfiles/bin':$PATH
+path+=$HOME/.dotfiles/bin
 
 if [ -d '$HOME/.ghcup' ]; then
-	export PATH='$HOME/.ghcup/bin':$PATH
+	path+=$HOME/.ghcup/bin
 fi
 
 setopt histignorealldups sharehistory
