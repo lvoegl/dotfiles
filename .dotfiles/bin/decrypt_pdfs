@@ -6,9 +6,8 @@ if [ $? -ne 0 ]; then
 	exit 1
 fi
 
-if [ $# -ne 2 ]
-	then
-	echo "$0 <folder-path> <password>"
+if [ $# -ne 2 ]; then
+	echo "$(basename "$0") <folder-path> <password>"
 	exit 2
 fi
 
