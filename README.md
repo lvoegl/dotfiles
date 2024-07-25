@@ -7,3 +7,5 @@ apt install -y \
     zplug \
     fzf
 ```
+
+**Note:** `[user]` in [.gitconfig](.gitconfig) must be replaced

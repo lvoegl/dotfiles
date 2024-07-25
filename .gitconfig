@@ -1,7 +1,7 @@
 [user]
-	name = Lukas Voegl
-	email = lukas@voegl.org
-	signingkey = /home/lvoegl/.ssh/id_ed25519.pub
+	name = John Doe
+	email = john@example.org
+	signingkey = /home/john/.ssh/id_ed25519.pub
 [alias]
 	cm = commit -m
 	csm = commit -sm
