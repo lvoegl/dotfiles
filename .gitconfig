@@ -11,3 +11,4 @@
 	gpgsign = true
 [core]
 	editor = vim
+	excludesFile = ~/.dotfiles/git/.gitignore
