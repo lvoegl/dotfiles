@@ -1,2 +1,4 @@
 # VSCodium/VSCode clangd cache
 .cache/
+# Clang JSON compilation database
+compile_commands.json
