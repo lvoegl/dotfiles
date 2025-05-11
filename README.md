@@ -40,6 +40,22 @@ apt install -y \
     konsole
 ```
 
+## VDU Controls
+### Files
+- [AutoLux.conf](.config/vdu_controls/AutoLux.conf)
+- [vdu_controls.conf](.config/vdu_controls/vdu_controls.conf)
+- [measure_lux](.dotfiles/bin/measure_lux)
+### Notes
+- Configuration requires a Yocto-Light-V3
+- Replace `/home/john` with actual home folder in [AutoLux.conf](.config/vdu_controls/AutoLux.conf)
+- Replace `default_display` in [AutoLux.conf](.config/vdu_controls/AutoLux.conf) with actual display name
+### Requirements
+```
+apt install -y \
+    ddcutil \
+    python3-hid
+```
+
 ## Other
 ### Files
 - [decrypt_pdfs](.dotfiles/bin/decrypt_pdfs)
