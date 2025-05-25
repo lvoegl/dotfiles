@@ -7,7 +7,7 @@ import sys
 VENDOR_ID = 0x24e0
 PRODUCT_ID = 0x0050
 
-MAX_READS = 64
+MAX_READS = 10
 
 def write_hex(device, hex):
     data = bytes.fromhex(hex)
@@ -19,7 +19,10 @@ def write_hex(device, hex):
         if not res:
             return buf
         buf += bytes([c for c in res if 32 <= c <= 126])
-    raise Exception(f"did not get response after {MAX_READS} reads")
+    if not buf:
+        raise Exception(f"did not get response after {MAX_READS} reads")
+
+    return buf
 
 def main():
     exit_code = 0
@@ -31,11 +34,6 @@ def main():
         res = write_hex(device, "0000f9090201000000b00e569f6a550000090000000000000060ed549f6a55000008ef549f6a55000040ff9466f77f000028ee549f6a550000fa029466f77f0000")
         res = write_hex(device, "0008f90100fe7f000058ffffffffffffff0000000000000000f066f82bfe7f00007868f82bfe7f0000d85ad06f6a55000020409b66f77f00001f7f4b66f77f0000")
         res = write_hex(device, "000848474554202f6170692e6a736f6e200d0a0d0a00a8000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-
-        json_end_index = res.find(b"}}")
-        if json_end_index == -1:
-            raise Exception("did not find JSON ending")
-        res = res[:json_end_index + 2]
 
         payload = res.lstrip(b"OK")
         if len(payload) == len(res):
